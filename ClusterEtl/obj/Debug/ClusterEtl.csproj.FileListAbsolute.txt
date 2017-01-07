@@ -30,3 +30,15 @@ E:\temp\clusteretl\ClusterEtl\ClusterEtl\bin\Debug\Npgsql.xml
 E:\temp\clusteretl\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.csprojResolveAssemblyReference.cache
 E:\temp\clusteretl\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.exe.manifest
 E:\temp\clusteretl\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.application
+E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\ClusterEtl.exe.config
+E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.exe
+E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.pdb
+E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\ClusterEtl.exe.manifest
+E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\ClusterEtl.application
+E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\ClusterEtl.exe
+E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\ClusterEtl.pdb
+E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\Npgsql.dll
+E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\Npgsql.xml
+E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.csprojResolveAssemblyReference.cache
+E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.exe.manifest
+E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.application

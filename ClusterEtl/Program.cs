@@ -50,7 +50,7 @@ namespace ClusterEtl
                     // Establish the remote endpoint for the socket.
                     IPHostEntry ipHostEntry = Dns.GetHostEntry(clusteradd);
                     //Console.WriteLine(ipHostEntry.AddressList.Length);
-                    IPAddress ipAddress = ipHostEntry.AddressList[1];
+                    IPAddress ipAddress = ipHostEntry.AddressList[0];
                   
                     //IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), clusterport);
                     IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
@@ -79,7 +79,7 @@ namespace ClusterEtl
                         // while (looppi <1000000)
                         while (true)
                         {
-                            sender.ReceiveTimeout = 90000;
+                            sender.ReceiveTimeout = 900000;
                             int bytesRec = sender.Receive(bytes);
                             string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                             response = response.Trim();
