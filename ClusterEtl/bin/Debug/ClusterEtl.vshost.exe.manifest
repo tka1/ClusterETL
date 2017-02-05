@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClusterEtl.exe" size="12704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClusterEtl.exe" size="13216">
       <assemblyIdentity name="ClusterEtl" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F2eLSF5+peWvxoMm7g5gBB2cPgLe5bjs4ryghkgfIko=</dsig:DigestValue>
+        <dsig:DigestValue>5s8dBswFuFV4VrZxOigwqDfr3CaU3WgYltyWejSw9B0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
