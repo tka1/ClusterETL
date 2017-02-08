@@ -1,287 +1,155 @@
 
-Log Entry : 18:44:48 28 January 2017
+Log Entry : 06:56:42 08 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 18:44:48 28 January 2017
+Log Entry : 06:56:43 08 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 18:46:53 28 January 2017
+Log Entry : 14:24:10 08 February 2017
   :
-  System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
-Parameter name: startIndex
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 104
+  format exception50008,
 -------------------------------
 
-Log Entry : 18:46:53 28 January 2017
-  :
-  Connected
--------------------------------
-
-Log Entry : 19:43:38 28 January 2017
+Log Entry : 18:34:52 08 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 19:43:39 28 January 2017
+Log Entry : 18:34:53 08 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 19:44:54 28 January 2017
-  :
-  DX de W4KAZ-#:System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
-Parameter name: startIndex
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 107
--------------------------------
-
-Log Entry : 20:03:16 28 January 2017
+Log Entry : 18:35:56 08 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 20:03:16 28 January 2017
+Log Entry : 18:35:56 08 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 20:14:04 28 January 2017
-  :
-  DX de DL6ZB-#:    1818.3  HG8DX          CW    54 dB  31 WPM  CQSystem.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 109
--------------------------------
-
-Log Entry : 20:17:41 28 January 2017
-  :
-  DX de ON5KQ-1-#:   1870.1  LY5W           CW     3 dB  27 WPM  CQSystem.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 109
--------------------------------
-
-Log Entry : 22:35:55 28 January 2017
+Log Entry : 18:36:41 08 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 22:35:55 28 January 2017
+Log Entry : 18:36:42 08 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 22:55:22 28 January 2017
-  :
-  DX de S50ARX-#:   1842.2  IQ9UI          CW    42 dB  28 WPM  CQ      2055Z
-DX de S50ARX-#:   3516.3  F4KIP          CW    26 dB  23 WPM  CQ      2055Z
-DX de S50ARX-#:   7030.2  S54O           CW     5 dB  29 WPM  CQ      2055Z
-DX de S50ARX-#:   7063.3  K3E            CW    32 dB  38 WPM  CQ      2055Z
-DX de G4DPF-#:    3509.0  F8DHE          CW    15 dB  26 WPM  CQ      2055Z
-DX de HA2KSD-#:   7035.7  G0MFR          CW    34 dB  17 WPM  CQ      2055Z
-DX de WB6BEE-#:  14050.0  K6KPH          CW    44 dB  22 WPM  CQ      2055Z
-DX de K3LR-#:     7032.6  W8MAI          CW    30 dB  21 WPM  CQ      2055Z
-DX de HA1VHF-#:   1826.2  OH0Z           CW    22 dB  29 WPM  CQ      2055Z
-DX de HA1VHF-#:   1842.2  IQ9UI          CW    32 dB  29 WPM  CQ      2055Z
-DX de HA1VHF-#:   3516.3  F4KIP          CW    26 dB  23 WPM  CQ      2055Z
-DX de HA1VHF-#:   7035.6  G0MFR          CW    35 dB  18 WPM  CQ      2055Z
-DX de HA1VHF-#:   1848.4  DL1BUG         CW    34 dB  31 WPM  CQ      2055Z
-DX de LZ4UX-#:    1812.6  9A5Y           CW    11 dB  31 WPM  CQ      2055Z
-DX de OH6BG-#:    1814.1  SN2M           CW    58 dB  28 WPM  CQ      2055Z
-DX de OH6BG-#:    3516.4  F4KIP          CW    20 dB  23 WPM  CQ      2055Z
-DX de OH6BG-#:    3509.0  F8DHE          CW    21 dB  27 WPM  CQ      2055Z
-DX de DK3UA-#:    1840.0  UR7EU          CW     7 dB  30 WPM  CQ      2055Z
-DX de DF4UE-#:    7043.9  IT9GJK         RTTY  16 dB  45 BPS  CQ      2055Z
-DX de DF4UE-#:    7053.4  G2L            RTTY  13 dB  45 BPS  CQ      2055Z
-DX de DF4UE-#:    1873.7  RN1CW          CW    12 dB  23 WPM  CQ      2055Z
-DX de DF4UE-#:    7031.0  TM2T           CW     4 dB  26 WPM  CQ      2055Z
-DX de DJ2BC-#:    1826.2  OH0Z           CW    25 dB  27 WPM  CQ      2055Z
-DX de DJ2BC-#:    1813.3  LY2M           CW    33 dB  29 WPM  CQ      2055Z
-DX de LY2XW-#:    1854.7  UT5EL          CW    35 dB  26 WPM  CQ      2055Z
-DX de ON5KQ-#:    3516.3  F4KIP          CW    26 dB  23 WPM  CQ      2055Z
-DX de ON5KQ-#:    1848.4  DL1BUG         CW    37 dB  31 WPM  CQ      2055Z
-DX de ON5KQ-#:    1833.0  IZ4OSH         CW    33 dB  27 WPM  CQ      2055Z
-DX de ON5KQ-#:    1831.7  EI0R           CW    36 dB  25 WPM  CQ      2055Z
-DX de NY3A-#:    14050.0  K6KPH          CW    18 dB  21 WPM  CQ      2055Z
-DX de DK9IP-#:    3509.0  F8DHE          CW    21 dB  27 WPM  CQ      2055Z
-DX de HB9DCO-#:   3516.4  F4KIP          CW    28 dB  23 WPM  CQ      2055Z
-DX de HB9DCO-#:   1848.4  DL1BUG         CW    20 dB  31 WPM  CQ      2055Z
-DX de HB9DCO-#:   1831.7  EI0R           CW    31 dB  27 WPM  CQ      2055Z
-DX de W0MU-#:    14050.0  K6KPH          CW    39 dB  22 WPM  CQ      2055Z
-DX de IK3STG-#:   1833.0  IZ4OSH         CW    16 dB  27 WPM  CQ      2055Z
-DX de OE6TZE-#:   7035.7  G0MFR          CW    24 dB  18 WPM  CQ      2055Z
-DX de DF7GB-#:    1848.4  DL1BUG         CW    26 dB  31 WPM  CQ      2055Z
-DX de DF7GB-#:    1831.7  EI0R           CW    23 dB  28 WPM  CQ      2055Z
-DX de DF4XX-#:    3565.0  SP1AP          CW    22 dB  21 WPM  CQ      2055Z
-DX de RZ9UN-#:    1820.8  JA3YBK         CW    24 dB  30 WPM  CQ      2055Z
-DX de RZ9UN-#:    1832.2  G3TXF          CW    31 dB  28 WPM  CQ      2055Z
-DX de DL6ZB-#:    1810.1  S51V           CW    43 dB  30 WPM  CQ      2055Z
-DX de DL6ZB-#:    1831.1  OZ3SM          CW    36 dB  24 WPM  CQ      2055Z
-DX de W3LPL-#:    7055.0  PA2PAS         RTTY  16 dB  45 BPS  CQ      2055Z
-DX de HB9JCB-#:   3543.0  IZ6TGS         CW    21 dB  17 WPM  CQ      2055Z
-DX de HB9JCB-#:   1826.0  OL1C           CW    24 dB  30 WPM  CQ      2055Z
-DX de HB9JCB-#:   3520.0  TM57A          CW    21 dB  25 WPM  CQ      2055Z
-DX de HB9JCB-#:   3565.0  SP1AP          CW    14 dB  21 WPM  CQ      2055Z
-DX de G7SOZ-#:    1833.8  LY5W           CW    14 dB  26 WPM  CQ      2055Z
-DX de G7SOZ-#:    1826.0  OL1C           CW    26 dB  30 WPM  CQ      2055Z
-DX de WZ7I-#:    14050.0  K6KPH          CW    30 dB  21 WPM  CQ      2055Z
-DX de ON5KQ-1-#:   1822.1  UW5ZO          CW    32 dB  28 WPM  CQ      2055Z
-DX de ON5KQ-1-#:   3516.4  F4KIP          CW    31 dB  23 WPM  CQ      2055Z
-DX de ON5KQ-1-#:   1848.4  DL1BUGSystem.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 107
--------------------------------
-
-Log Entry : 23:04:45 28 January 2017
-  :
-  DX de G7SOZ-#:    1820.1  OK2D           CW    25 dB  31 WPM  CQ      2104Z
-DX de G7SOZ-#:    1827.7  DM7C           CW    29 dB  31 WPM  CQ      2104Z
-DX de G7SOZ-#:    1810.1  S51V           CW    24 dB  29 WPM  CQ      2104Z
-DX de G7SOZ-#:    3536.3  F6GPT          CW    18 dB  22 WPM  CQ      2104Z
-DX de G7SOZ-#:    1814.1  SN2M           CW    22 dB  33 WPM  CQ      2104Z
-DX de G7SOZ-#:    1826.0  OL1C           CW    24 dB  29 WPM  CQ      2104Z
-DX de G7SOZ-#:    7015.1  KW1C           CW    11 dB  30 WPM  CQ      2104Z
-DX de G7SOZ-#:    1833.0  IZ4OSH         CW    17 dB  27 WPM  CQ      2104Z
-DX de G7SOZ-#:    1824.3  OM3RM          CW    14 dB  34 WPM  CQ      2104Z
-DX de G7SOZ-#:    1836.0  UA3A           CW    16 dB  38 WPM  CQ      2104Z
-DX de G7SOZ-#:    1839.0  HB9DHG         CW    22 dB  34 WPM  CQ      2104Z
-DX de G7SOZ-#:    1821.6  OF5Z           CW    19 dB  30 WPM  CQ      2104Z
-DX de G7SOZ-#:    1829.1  OK1DX          CW    22 dB  27 WPM  CQ      2104Z
-DX de HB9DCO-#:   1840.3  OK2W           CW    33 dB  30 WPM  CQ      2104Z
-DX de HB9DCO-#:   3568.4  DK4LX          CW    17 dB  29 WPM  CQ      2104Z
-DX de ON5KQ-1-#:   3533.5  F5UQE          CW    30 dB  19 WPM  CQ      2104Z
-DX de ON5KQ-1-#:   1842.1  IQ9UI          CW    19 dB  32 WPM  CQ      2104Z
-DX de ON5KQ-1-#:   1840.3  OK2W           CW    44 dB  31 WPM  CQ      2104Z
-DX de ON5KQ-1-#:   3568.4  DK4LX          CW    29 dB  28 WPM  CQSystem.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 109
--------------------------------
-
-Log Entry : 23:07:00 28 January 2017
-  :
-  DX de G0KTN-#:    1818.4  G3U            CW    42 dB  32 WPM  CQ      2107Z
-DX de G0KTN-#:    1816.9  UX2X           CW    15 dB  26 WPM  CQ      2107Z
-DX de G0KTN-#:    1837.2  EI5KF          CW    35 dB  30 WPM  CQ      2107Z
-DX de G0KTN-#:    1819.2  UT6UD          CW    13 dB  32 WPM  CQ      2107Z
-DX de G0LUJ-System.ArgumentOutOfRangeException: Length cannot be less than zero.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 106
--------------------------------
-
-Log Entry : 23:08:55 28 January 2017
-  :
-  DX de HB9JCB-#:   3536.5  IZ2GRG         CW    13 dB  26 WPM  CQ      2108Z
-DX de W4KAZ-#:    1840.0  K0DI           CW     8 dB  24 WPM  CQ      2108Z
-DX de G7SOZ-#:    7026.1  F5UTN          CW    14 dB  19 WPM  CQ      2108Z
-DX de G7SOZ-#:    1838.5  OM4Q           CW    20 dB  31 WPM  CQ      2108Z
-DX de G7SOZ-#:    1827.4  OT6M           CW    31 dB  28 WPM  CQ      2108Z
-DX de G7SOZ-#:    1826.3  OH0Z           CW    16 dB  32 WPM  CQ      2108Z
-DX de G7SOZ-#:    3536.6  IZ2GRG         CW    19 dB  26 WPM  CQ      2108Z
-DX de ON5KQ-1-#:   1860.1  EU1U           CW    15 dB  25 WPM  CQ      2108Z
-DX de ON5KQ-1-#:   3532.6  OM3WZ          CW    21 dB  28 WPM  CQ      2108Z
-DX de ON5KQ-1-#:   3515.2  F6BGH          CW    30 dB  21 WPM  CQ      2108Z
-DX de ON5KQ-1-#:   3536.5  IZ2GRG         CW    29 dB  26 WPM  CQ      2108Z
-DX de HB9DCO-#:   3536.5  IZ2GRG         CW    27 dB  26 WPM  CQ      2108Z
-DX de DL2CC-#:    1845.0  DH0GHU         CW    42 dB  29 WPM  CQ      2108Z
-DX de DL2CC-#:    1861.3  HA6NL          CW    23 dB  30 WPM  CQ      2108Z
-DX de DL2CSystem.ArgumentOutOfRangeException: Length cannot be less than zero.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 106
--------------------------------
-
-Log Entry : 23:15:20 28 January 2017
-  :
-  DX de HB9JCB-#:   1827.4  OT6M           CW    24 dB  28 WPM  CQ      2115Z
-DX de HB9JCB-#:   1830.0  IZ8VYU         CW    12 dB  31 WPM  CQ      2115Z
-DX de HB9JCB-#:   1825.0  9A5M           CW    13 dB  31 WPM  CQ      2115Z
-DX de G7SOZ-#:    1827.4  OT6M           CW    32 dB  29 WPM  CQ      2115Z
-DX de G7SOZ-#:    1830.1  IZ8VYU         CW    14 dB  31 WPM  CQ      2115Z
-DX de G7SOZ-#:    1831.7  EI0R           CW    31 dB  27 WPM  CQ      2115Z
-DX de G7SOZ-#:    1822.9  EU4E           CW    17 dB  30 WPM  CQ      2115Z
-DX de G7SOZ-#:    3521.7  F6DCQ          CW    23 dB  23 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1823.8  DL1AUZ         CW    43 dB  31 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1830.3  HA5UA          CW    31 dB  26 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1830.0  IZ8VYU         CW    37 dB  31 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1848.9  SP4G           CW    41 dB  29 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1825.0  9A5M           CW    39 dB  32 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1838.6  S51DX          CW    26 dB  35 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1837.8  S50K           CW    42 dB  31 WPM  CQ      2115Z
-DX de ON5KQ-1-#:   1851.3  PA0BWL         CW    24 dB  30 WPM  CQ      2115Z
-DX de SM6FMB-#:   1830.3  HA5UA          CW    16 dB  25 WPM  CQ      2115Z
-DX de SM6FMB-#:   1830.0  IZ8VYU         CW    19 dB  31 WPM  CQ      2115Z
-DX de SM6FMB-#:   3545.5  F6JOE          CW    11 dB  26 WPM  CQSystem.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 109
--------------------------------
-
-Log Entry : 23:26:12 28 January 2017
-  :
-  DX de G4DPF-#:    3540.5  F9EW           CW    13 dB  17 WPM  CQ      2126Z
-DX de DO4DXA-#:   1814.4  SV3RF          CW    27 dB  25 WPM  CQ      2126Z
-DX de DO4DXA-#:   1818.6  9A3XV          CW    37 dB  30 WPM  CQ      2126Z
-DX de DO4DXA-#:   1839.5  DD2ML          CW    39 dB  37 WPM  CQ      2126Z
-DX de DO4DXA-#:   1845.9  HA4XH          CW    29 dB  28 WPM  CQ      2126Z
-DX de DO4DXA-#:   1852.8  LY2BKT         CW    26 dB  31 WPM  CQ      2126Z
-DX de DO4DXA-#:   3534.0  F5IC           CW    19 dB  27 WPM  CQ      2126Z
-DX de DO4DXA-#:   1887.0  UR6EA          CW     6 dB  30 WPM  CQ      2126Z
-DX de DO4System.ArgumentOutOfRangeException: Length cannot be less than zero.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 106
--------------------------------
-
-Log Entry : 23:26:12 28 January 2017
-  :
-  DXA-#:   1838.6  OK1AXB         CW    13 dB  25 WPM  CQ      2126Z
-DX de G0SYP-#:   1830.15  HA5UA          CW     6 dB  25 WPM  CQ      2126Z
-DX de G0SYP-#:   3514.45  F6DYX          CW    12 dB  22 WPM  CQ      2126Z
-DX de G0SYP-#:   1841.75  UR7R           CW     5 dB  30 WPM  CQ      2126Z
-DX de G0SYP-#:   3540.35  F9EW           CW    11 dB  17 WPM  CQ      2126ZSystem.ArgumentOutOfRangeException: Length cannot be less than zero.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 106
--------------------------------
-
-Log Entry : 23:27:48 28 January 2017
-  :
-  DX de W8WTS-#:    1825.8  VE3JM          CW     3 dB  30 WPM  CQ      2127Z
-DX de AC0C-#:     7032.6  W8MAI          CW    22 dB  21 WPM  CQ      2127Z
-DX de AC0C-#:     7043.0  N5OAK          CW    25 dB  12 WPM  CQ      2127Z
-DX de WE9V-#:     7043.0  N5OAK          CW    10 dB  12 WPM  CQ      2127Z
-DX de HB9BXE-#:   3525.0  F8CE           CW    23 dB  25 WPM  CQ      2127Z
-DX de HB9BXE-#:   1815.5  TM6M           CW    33 dB  26 WPM  CQ      2127Z
-DX de HB9BXE-#System.ArgumentOutOfRangeException: Length cannot be less than zero.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 106
--------------------------------
-
-Log Entry : 18:42:06 07 February 2017
+Log Entry : 18:37:01 08 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 18:42:07 07 February 2017
+Log Entry : 18:37:01 08 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 18:48:47 07 February 2017
+Log Entry : 18:38:08 08 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 18:48:47 07 February 2017
+Log Entry : 18:38:08 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 18:38:31 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 18:38:31 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 18:39:49 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 18:39:49 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 18:47:29 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 18:47:29 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 18:47:52 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 18:47:52 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 18:48:19 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 18:48:19 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 18:50:47 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 18:50:48 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 19:27:20 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 19:27:21 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 19:27:54 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 19:27:54 08 February 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 19:45:46 08 February 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 19:45:46 08 February 2017
   :
   Connected
 -------------------------------

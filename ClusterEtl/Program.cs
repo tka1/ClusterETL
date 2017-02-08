@@ -90,23 +90,28 @@ namespace ClusterEtl
                                 string skimmode = "";
                                 string mode = "";
                                 string band = "";
-
+                               
                                 //split respone to each line 
                                 string[] lines = Regex.Split(response, "\r\n");
                                 foreach (string line in lines)
                                 {
-                                    if (line.Length < 71)
+                                    // is line length enough for substring
+                                    int length_minus_info = line.Length - (line.IndexOf(":") + 26 + 30);
+                                    String pituus = Convert.ToString(length_minus_info);
+                                    if (length_minus_info < 0)
                                     {
                                          using (StreamWriter w = File.AppendText("log2.txt"))
                                         {
-                                          Log(line, w);
+                                          Log(line + pituus, w);
+                                           Log(pituus, w);
                                         }
 
-                                        // Console.WriteLine(line);
+                                      //   Console.WriteLine(line.IndexOf(":") + 26 +30 );
+                                        
                                     }
+                                   // Console.WriteLine(line + pituus);
 
-
-                                    if (line.Length > 70)
+                                    if (length_minus_info >= 0)
                                         {
                                         try
                                         {
@@ -178,7 +183,7 @@ namespace ClusterEtl
                                                 Console.WriteLine("format exception '{0}.", freq_orig);
                                                 using (StreamWriter w = File.AppendText("log.txt"))
                                                 {
-                                                    Log("format exception" + freq_orig, w);
+                                                    Log(line + " " + "format exception" + freq_orig, w);
                                                 }
                                             }
                                             //Console.WriteLine(mode + ":");
