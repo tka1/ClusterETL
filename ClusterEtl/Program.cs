@@ -80,6 +80,7 @@ namespace ClusterEtl
                         while (true)
                         {
                             sender.ReceiveTimeout = 900000;
+                            sender.ReceiveBufferSize = 64000;
                             int bytesRec = sender.Receive(bytes);
                             string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                             response = response.Trim();
@@ -103,7 +104,7 @@ namespace ClusterEtl
                                          using (StreamWriter w = File.AppendText("log2.txt"))
                                         {
                                           Log(line + pituus, w);
-                                           Log(pituus, w);
+                                           
                                         }
 
                                       //   Console.WriteLine(line.IndexOf(":") + 26 +30 );
