@@ -22,11 +22,9 @@ namespace ClusterEtl
         }
         public static void StartClient()
         {
-
             using (StreamWriter w = File.AppendText("log.txt"))
             {
                 Log("ETL started", w);
-
             }
 
             while (true)
@@ -60,6 +58,8 @@ namespace ClusterEtl
                     // Connect the socket to the remote endpoint. Catch any errors.
                     try
                     {
+                        sender.ReceiveTimeout = 900000;
+                        sender.ReceiveBufferSize = 1024000;
                         sender.Connect(remoteEP);
                         Console.WriteLine("Socket connected to {0}",
                           sender.RemoteEndPoint.ToString());
@@ -77,42 +77,39 @@ namespace ClusterEtl
                         // Encode the data string into a byte array.
                         // int looppi = 0;
                         // while (looppi <1000000)
+                        
+                        
                         while (true)
                         {
-                            sender.ReceiveTimeout = 900000;
-                            sender.ReceiveBufferSize = 64000;
+                            
                             int bytesRec = sender.Receive(bytes);
                             string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                           
                             response = response.Trim();
                             Console.WriteLine(response);
+                          
                             if (response.StartsWith("DX"))
 
                             {
-                                string skimmode = "";
+                               string skimmode = "";
                                 string mode = "";
                                 string band = "";
                                
                                 //split respone to each line 
                                 string[] lines = Regex.Split(response, "\r\n");
-                                foreach (string line in lines)
+                                  foreach (string line in lines)
                                 {
                                     // is line length enough for substring
                                     int length_minus_info = line.Length - (line.IndexOf(":") + 26 + 30);
                                     String pituus = Convert.ToString(length_minus_info);
                                     if (length_minus_info < 0)
                                     {
-                                         using (StreamWriter w = File.AppendText("log2.txt"))
-                                        {
-                                          Log(line + pituus, w);
-                                           
-                                        }
-
-                                      //   Console.WriteLine(line.IndexOf(":") + 26 +30 );
-                                        
-                                    }
-                                   // Console.WriteLine(line + pituus);
-
-                                    if (length_minus_info >= 0)
+                                        using (StreamWriter w = File.AppendText("log2.txt"))
+                                          {
+                                          Log(line + pituus +":" + response.Length, w);
+                                          }
+                                             }
+                                   if (length_minus_info >= 0)
                                         {
                                         try
                                         {
@@ -129,9 +126,6 @@ namespace ClusterEtl
                                                 db = info.Substring((info.IndexOf("dB") - 3), 2);
                                             }
                                             else db = info.Substring((info.IndexOf("dB") - 2), 2);
-                                            // Console.WriteLine(info.IndexOf("dB"));
-
-
                                             Match cqmodematch = Regex.Match(info, ("(.*)CQ(.*)"));
                                             if (cqmodematch.Success)
                                             {
@@ -142,7 +136,6 @@ namespace ClusterEtl
                                             {
                                                 skimmode = "DE";
                                             }
-
                                             Match cwmatch = Regex.Match(info, ("(.*)CW(.*)"));
                                             if (cwmatch.Success)
                                             {
@@ -168,14 +161,11 @@ namespace ClusterEtl
                                             {
                                                 mode = "CW";
                                             }
-
                                             decimal freq = 0;
                                             decimal signal = 0;
-
                                             try
                                             {
                                                 freq_orig = freq_orig.Replace(".", ",");
-
                                                 freq = Decimal.Parse(freq_orig);
                                                 signal = Decimal.Parse(db);
                                             }
@@ -247,42 +237,40 @@ namespace ClusterEtl
                                                 band = "2M";
                                             }
 
+                                            string dxcountry = "";
+                                            string dx_cont = "";
+                                            string decountry = "";
+                                            string de_cont = "";
 
                                             try
                                             {
                                                 conn.Open();
-                                                NpgsqlCommand cmd2 = new NpgsqlCommand("SELECT  country,continent,length(prefix) FROM cluster.dxcc where :value1 like concat(dxcc.prefix, '%') order by 3 desc limit 1", conn);
+                                                NpgsqlCommand cmd2 = new NpgsqlCommand("SELECT * from(SELECT  country,continent,length(prefix) as prelength FROM cluster.dxcc where :value1 like concat(dxcc.prefix, '%') order by 3 desc limit 1)as foo where prelength >0", conn);
                                                 cmd2.Parameters.Add(new NpgsqlParameter("value1", NpgsqlTypes.NpgsqlDbType.Text));
                                                 cmd2.Parameters[0].Value = dxcall;
                                                 // string dxcountry = (String)cmd2.ExecuteScalar();
                                                 NpgsqlDataReader dr2 = cmd2.ExecuteReader();
-                                                string dxcountry = "";
-                                                string dx_cont = "";
                                                 while (dr2.Read())
                                                 {
                                                     dxcountry = dr2[0].ToString();
                                                     dx_cont = dr2[1].ToString();
                                                 }
-                                                conn.Close();
-                                                conn.Open();
+                                               conn.Close();
 
-
-
-                                                NpgsqlCommand cmd3 = new NpgsqlCommand("SELECT  country,continent,length(prefix) FROM cluster.dxcc where :value1 like concat(dxcc.prefix, '%') order by 3 desc limit 1", conn);
+                                               conn.Open();
+                                               NpgsqlCommand cmd3 = new NpgsqlCommand("SELECT * from(SELECT  country,continent,length(prefix) as prelength FROM cluster.dxcc where :value1 like concat(dxcc.prefix, '%') order by 3 desc limit 1)as foo where prelength >0", conn);
                                                 cmd3.Parameters.Add(new NpgsqlParameter("value1", NpgsqlTypes.NpgsqlDbType.Text));
                                                 cmd3.Parameters[0].Value = decallin;
                                                 // string decountry = (String)cmd3.ExecuteScalar();
                                                 NpgsqlDataReader dr3 = cmd3.ExecuteReader();
-                                                string decountry = "";
-                                                string de_cont = "";
                                                 while (dr3.Read())
                                                 {
                                                     decountry = dr3[0].ToString();
                                                     de_cont = dr3[1].ToString();
                                                 }
                                                 conn.Close();
+                                                                                             
                                                 conn.Open();
-
                                                 NpgsqlCommand cmd = new NpgsqlCommand("insert into cluster.clustertable(dxcall,country,de_country,freq,decall,skimmode,mode,band,sig_noise,dx_continent,de_continent,title) values ( :value1 ,:value2,:value3,:value4,:value5,:value6,:value7,:value8,:value9,:value10,:value11,:value12)", conn);
                                                 cmd.Parameters.Add(new NpgsqlParameter("value1", NpgsqlTypes.NpgsqlDbType.Text));
                                                 cmd.Parameters.Add(new NpgsqlParameter("value2", NpgsqlTypes.NpgsqlDbType.Text));
@@ -318,11 +306,9 @@ namespace ClusterEtl
                                                 using (StreamWriter w = File.AppendText("log.txt"))
                                                 {
                                                     Log(ex.Message, w);
-
                                                 }
                                             }
-
-                                        }
+                                            }
                                         catch (Exception ex)
                                         {
                                             Console.WriteLine(ex);
@@ -357,12 +343,10 @@ namespace ClusterEtl
                             Console.WriteLine("SocketException : {0}", se.ToString());
                             using (StreamWriter w = File.AppendText("log.txt"))
                             {
-
                                 Log(se.ToString(), w);
-
                             }
                             // Release the socket.
-                             sender.Shutdown(SocketShutdown.Both);
+                            sender.Shutdown(SocketShutdown.Both);
                             sender.Close();
                            ConnStatus = false;
                         }

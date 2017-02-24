@@ -39,6 +39,5 @@ E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\ClusterEtl.exe
 E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\ClusterEtl.pdb
 E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\Npgsql.dll
 E:\GitHub folder\ClusterETL\ClusterEtl\bin\Debug\Npgsql.xml
-E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.csprojResolveAssemblyReference.cache
 E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.exe.manifest
 E:\GitHub folder\ClusterETL\ClusterEtl\obj\Debug\ClusterEtl.application
