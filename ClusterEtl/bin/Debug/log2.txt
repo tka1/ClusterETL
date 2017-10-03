@@ -1,15 +1,275 @@
 
-Log Entry : 22:13:11 24 February 2017
+Log Entry : 11:25:25 26 February 2017
   :
-  DX-53:310
+  DX de LZ7AA-#:    70-49, response.Length:328, bytesRec:328
 -------------------------------
 
-Log Entry : 22:13:48 24 February 2017
+Log Entry : 11:25:26 26 February 2017
   :
-  DX-53:79
+  DX de HB9JCB-#:  140-50, response.Length:328, bytesRec:328
 -------------------------------
 
-Log Entry : 22:14:31 24 February 2017
+Log Entry : 11:25:26 26 February 2017
   :
-  DX-53:79
+  DX de DL9GTB-#:  14-51, response.Length:328, bytesRec:328
+-------------------------------
+
+Log Entry : 11:25:28 26 February 2017
+  :
+  DX de DK0TE-#:   140-49, response.Length:328, bytesRec:328
+-------------------------------
+
+Log Entry : 11:25:28 26 February 2017
+  :
+  DX de LA6TPA-#:  140-50, response.Length:328, bytesRec:328
+-------------------------------
+
+Log Entry : 16:46:35 27 September 2017
+  :
+  DX de KM3T-2-#-41, response.Length:938, bytesRec:938
+-------------------------------
+
+Log Entry : 18:24:50 27 September 2017
+  :
+  DX de W8QZR/3-#:  14047.5  K4EJ           CW     6 dB  30 WPM  CQ-6, response.Length:1454, bytesRec:1460
+-------------------------------
+
+Log Entry : 09:27:39 30 September 2017
+  :
+  DX de SV1CDN-#:  14011.6  R6AF           CW    42 dB  22 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:40 30 September 2017
+  :
+  DX de EA5WU-#:   14049.4  OH6NPV         CW     8 dB  28 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:41 30 September 2017
+  :
+  DX de WZ7I-#:     3527.0  WA4LJJ         CW    28 dB  23 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:42 30 September 2017
+  :
+  DX de F5RRS-#:   10104.1  EA1NK          CW     5 dB  31 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:43 30 September 2017
+  :
+  DX de OH8WW-#:    7009.6  LY2KZ/P        CW    16 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:44 30 September 2017
+  :
+  DX de DL8LAS-#:   7009.6  LY2KZ/P        CW    14 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:44 30 September 2017
+  :
+  DX de DL8LAS-#:  10122.0  IZ2QXG         CW     6 dB  20 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:45 30 September 2017
+  :
+  DX de G0LUJ-#:    7009.6  LY2KZ/P        CW     5 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:45 30 September 2017
+  :
+  DX de NN3RP-#:    3527.0  WA4LJJ         CW    13 dB  24 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:46 30 September 2017
+  :
+  DX de W8WTS-#:    7007.0  XE2HQI         CW     3 dB  31 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:46 30 September 2017
+  :
+  DX de SK2AT-#:   14011.5  R6AF           CW    30 dB  21 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:46 30 September 2017
+  :
+  DX de VE7AB-#:    7007.0  XE2HQI         CW    11 dB  31 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:47 30 September 2017
+  :
+  DX de ZL4YL-#:   14100.0  ZL6B           CW    12 dB  17 WPM  NCDXF B 0627Z
+-------------------------------
+
+Log Entry : 09:27:47 30 September 2017
+  :
+  DX de VE7CC-#:    3527.0  WA4LJJ         CW    19 dB  25 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:47 30 September 2017
+  :
+  DX de DL1RNN-#:  10122.0  IZ2QXG         CW    17 dB  20 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:47 30 September 2017
+  :
+  DX de DL1RNN-#:   7009.6  LY2KZ/P        CW     9 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:47 30 September 2017
+  :
+  DX de DJ1RK-#:    7009.6  LY2KZ/P        CW    18 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:47 30 September 2017
+  :
+  DX de DK9IP-#:   14011.6  R6AF           CW    31 dB  22 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:48 30 September 2017
+  :
+  DX de OH6BG-#:   10122.0  IZ2QXG         CW    35 dB  20 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:48 30 September 2017
+  :
+  DX de OH6BG-#:    7009.6  LY2KZ/P        CW    39 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:48 30 September 2017
+  :
+  DX de OH6BG-#:   18086.0  IK5ZWU         CW     8 dB  22 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:49 30 September 2017
+  :
+  DX de SK3W-#:     3579.0  DK0WCY         CW    21 dB  17 WPM  BEACON  0627Z
+-------------------------------
+
+Log Entry : 09:27:49 30 September 2017
+  :
+  DX de SK3W-#:    10122.0  IZ2QXG         CW    21 dB  20 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:49 30 September 2017
+  :
+  DX de DJ9IE-#:    3579.0  DK0WCY         CW    42 dB  17 WPM  BEACON  0627Z
+-------------------------------
+
+Log Entry : 09:27:50 30 September 2017
+  :
+  DX de DJ9IE-#:   10122.0  IZ2QXG         CW    19 dB  19 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:50 30 September 2017
+  :
+  DX de DL9GTB-#:   1854.0  OK0EV          CW     2 dB  16 WPM  BEACON  0627Z
+-------------------------------
+
+Log Entry : 09:27:50 30 September 2017
+  :
+  DX de DL9GTB-#:  14071.6  R6TJ           PSK31 37 dB  31 BPS  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:52 30 September 2017
+  :
+  DX de OL7M-#:     7009.5  LY2KZ/P        CW    15 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:52 30 September 2017
+  :
+  DX de HA2KSD-#:   7009.6  LY2KZ/P        CW    26 dB  26 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:53 30 September 2017
+  :
+  DX de JO1YYP-#:   7011.6  JH6ZHV         CW    34 dB  25 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:53 30 September 2017
+  :
+  DX de VK2GEL-#:  14011.5  N6AF           CW     6 dB  22 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:53 30 September 2017
+  :
+  DX de OE6TZE-#:  10122.0  IZ2QXG         CW    15 dB  20 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:54 30 September 2017
+  :
+  DX de JA4ZRK-#:   7011.6  JH6ZHV         CW    27 dB  25 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:27:54 30 September 2017
+  :
+  DX de VK4CT-#:   14014.1  RK0UT          CW    10 dB  29 WPM  CQ      0627Z
+-------------------------------
+
+Log Entry : 09:30:37 30 September 2017
+  :
+  DX de JJ2VLY-#: 14004.00  V73NS          CW    25 dB  33 WPM  CQ      0630Z
+-------------------------------
+
+Log Entry : 09:31:11 30 September 2017
+  :
+  DX de EA5WU-#:   10107.0  4L/R4WW        CW    13 dB  29 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:11 30 September 2017
+  :
+  DX de EA5WU-#:   10111.0  VK2DSL         CW     6 dB  23 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:11 30 September 2017
+  :
+  DX de EA5WU-#:    7026.0  EU4U           CW     7 dB  24 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:11 30 September 2017
+  :
+  DX de EA5WU-#:   14023.0  LA9QJA         CW    11 dB  20 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:12 30 September 2017
+  :
+  DX de HA6PX-#:   14059.4  RX9CM          CW    20 dB  37 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:12 30 September 2017
+  :
+  DX de HA6PX-#:   10114.0  DG4FDQ         CW     8 dB  25 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:12 30 September 2017
+  :
+  DX de DK0TE-#:    7026.1  EU4U           CW    21 dB  23 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:12 30 September 2017
+  :
+  DX de F5RRS-#:   14059.6  RX9CM          CW    10 dB  40 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:12 30 September 2017
+  :
+  DX de W4KKN-#:    3514.5  N4QA           CW     5 dB  22 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:13 30 September 2017
+  :
+  DX de DO4DXA-#:  14059.5  RX9CM          CW     9 dB  37 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:14 30 September 2017
+  :
+  DX de DL8LAS-#:  14059.4  RX9CM          CW    18 dB  37 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:15 30 September 2017
+  :
+  DX de ES5PC-#:    7026.0  EU4U           CW    20 dB  24 WPM  CQ      0631Z
+-------------------------------
+
+Log Entry : 09:31:16 30 September 2017
+  :
+  DX de ZL4YL-#:   14024.0  EA2AJB         CW    11 dB  23 WPM  CQ      0631Z
 -------------------------------

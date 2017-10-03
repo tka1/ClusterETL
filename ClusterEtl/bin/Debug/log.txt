@@ -1,70 +1,263 @@
 
-Log Entry : 20:58:58 24 February 2017
+Log Entry : 11:18:35 26 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 20:58:59 24 February 2017
+Log Entry : 11:18:35 26 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 21:00:09 24 February 2017
+Log Entry : 11:25:21 26 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 21:00:10 24 February 2017
+Log Entry : 11:25:22 26 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 21:01:53 24 February 2017
+Log Entry : 11:26:10 26 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 21:01:54 24 February 2017
+Log Entry : 11:26:10 26 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 22:08:33 24 February 2017
+Log Entry : 18:15:48 28 February 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 22:08:34 24 February 2017
+Log Entry : 18:15:49 28 February 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 22:12:27 24 February 2017
+Log Entry : 11:28:07 11 March 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 22:12:28 24 February 2017
+Log Entry : 11:28:07 11 March 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 22:13:29 24 February 2017
+Log Entry : 08:49:43 25 May 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 22:13:30 24 February 2017
+Log Entry : 08:49:43 25 May 2017
   :
   Connected
 -------------------------------
 
-Log Entry : 22:14:45 24 February 2017
+Log Entry : 08:50:10 25 May 2017
+  :
+  System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 94
+-------------------------------
+
+Log Entry : 08:51:08 25 May 2017
   :
   ETL started
 -------------------------------
 
-Log Entry : 22:14:45 24 February 2017
+Log Entry : 08:51:43 25 May 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14:52:00 27 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 14:52:01 27 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14:54:33 27 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 14:54:33 27 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14:55:23 27 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 14:55:23 27 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 15:18:12 27 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 15:18:13 27 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 15:19:28 27 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 15:19:29 27 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 15:20:05 27 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 15:20:06 27 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 15:39:26 27 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 15:39:26 27 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 03:53:44 28 September 2017
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 94
+-------------------------------
+
+Log Entry : 03:53:45 28 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 09:24:22 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 09:24:23 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 09:27:37 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 09:27:38 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 09:30:36 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 09:30:36 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 09:31:09 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 09:31:10 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 09:31:51 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 09:31:52 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 21:37:26 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 21:37:26 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 21:37:32 30 September 2017
+  :
+  System.NullReferenceException: Object reference not set to an instance of an object.
+   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 127
+-------------------------------
+
+Log Entry : 21:37:32 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 21:37:38 30 September 2017
+  :
+  System.NullReferenceException: Object reference not set to an instance of an object.
+   at ClusterEtl.Etl.StartClient() in E:\GitHub folder\ClusterETL\ClusterEtl\Program.cs:line 127
+-------------------------------
+
+Log Entry : 21:37:38 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 21:40:06 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 21:40:06 30 September 2017
+  :
+  Connected
+-------------------------------
+
+Log Entry : 21:41:03 30 September 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 21:41:03 30 September 2017
   :
   Connected
 -------------------------------

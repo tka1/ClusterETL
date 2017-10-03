@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClusterEtl.exe" size="13216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClusterEtl.exe" size="14240">
       <assemblyIdentity name="ClusterEtl" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DmuZ2flW8SQVWgeN83bzQB7b26wunwRYC8sLaAcDVao=</dsig:DigestValue>
+        <dsig:DigestValue>me8+Qoh7Vfb3fvR89qPwAKwhDyXeCuqS8D4RwUiUWRc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -65,13 +65,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ClusterEtl.exe.config" size="553">
+  <file name="ClusterEtl.exe.config" size="1434">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HNz/1ZnUjIydspdlU3yeKitm3VA557NdTAN8R7xp9SM=</dsig:DigestValue>
+      <dsig:DigestValue>lRwdGovUMxR6OR9DGiCxdLPnCqk7T41U0a+0P/uAE5I=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

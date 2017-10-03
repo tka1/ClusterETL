@@ -1,25 +1,43 @@
-﻿using System;
-using System.Text;
+﻿using Npgsql;
+using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using System.Text.RegularExpressions;
-using Npgsql;
-using System.IO;
 
 namespace ClusterEtl
 {
-    
+
     public class Etl
     {
         public static void Log(string logMessage, TextWriter w)
         {
             w.Write("\r\nLog Entry : ");
-            w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
+           w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
                 DateTime.Now.ToLongDateString());
             w.WriteLine("  :");
             w.WriteLine("  {0}", logMessage);
-            w.WriteLine("-------------------------------");
+           w.WriteLine("-------------------------------");
         }
+
+        public static void Log2(string logMessage, TextWriter w)
+        {
+          //  w.Write("\r\nLog Entry : ");
+           // w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),DateTime.Now.ToLongDateString());
+            //w.WriteLine("  :");
+            w.WriteLine("  {0}", logMessage);
+           // w.WriteLine("-------------------------------");
+        }
+
+        public static void RawLog(string logMessage, TextWriter w)
+        {
+           
+            w.WriteLine("{0}", logMessage);
+            
+
+        }
+
         public static void StartClient()
         {
             using (StreamWriter w = File.AppendText("log.txt"))
@@ -39,9 +57,10 @@ namespace ClusterEtl
                 string userid = System.Configuration.ConfigurationManager.AppSettings["userid"];
                 string password = System.Configuration.ConfigurationManager.AppSettings["password"];
                 string skimmer_name = System.Configuration.ConfigurationManager.AppSettings["skimmer_name"];
+                string WriteRawlog = System.Configuration.ConfigurationManager.AppSettings["WriteRawlog"];
                 NpgsqlConnection conn = new NpgsqlConnection("Server=" + dbserver + ";User Id=" + userid + ";Password=Saturnus1!" + ";Database=" + database + ";");
                 // Data buffer for incoming data.
-                byte[] bytes = new byte[32824];
+                byte[] bytes = new byte[6400000];
                 // Connect to a remote device.
                 try
                 {
@@ -49,7 +68,7 @@ namespace ClusterEtl
                     IPHostEntry ipHostEntry = Dns.GetHostEntry(clusteradd);
                     //Console.WriteLine(ipHostEntry.AddressList.Length);
                     IPAddress ipAddress = ipHostEntry.AddressList[0];
-                  
+
                     //IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), clusterport);
                     IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
                     // Create a TCP/IP  socket.
@@ -59,7 +78,7 @@ namespace ClusterEtl
                     try
                     {
                         sender.ReceiveTimeout = 900000;
-                        sender.ReceiveBufferSize = 1024000;
+                        sender.ReceiveBufferSize = 6400000;
                         sender.Connect(remoteEP);
                         Console.WriteLine("Socket connected to {0}",
                           sender.RemoteEndPoint.ToString());
@@ -77,45 +96,58 @@ namespace ClusterEtl
                         // Encode the data string into a byte array.
                         // int looppi = 0;
                         // while (looppi <1000000)
-                        
-                        
+
+
                         while (true)
                         {
-                            
+
                             int bytesRec = sender.Receive(bytes);
+
                             string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                           
+
                             response = response.Trim();
                             Console.WriteLine(response);
-                          
+                           
+                           /* using (StreamWriter w = File.AppendText("rawlog.txt"))
+                            {
+                                RawLog(response, w);
+                            }
+                            */
                             if (response.StartsWith("DX"))
 
                             {
-                               string skimmode = "";
+                                string skimmode = "";
                                 string mode = "";
                                 string band = "";
-                               
+
                                 //split respone to each line 
                                 string[] lines = Regex.Split(response, "\r\n");
-                                  foreach (string line in lines)
+                                foreach (string line in lines)
                                 {
+                                    if (WriteRawlog.StartsWith("Y"))
+                                    { 
+                                    using (StreamWriter w = File.AppendText("rawlog.txt"))
+                                    {
+                                        Log2(line, w);
+                                    }
+                                }
                                     // is line length enough for substring
                                     int length_minus_info = line.Length - (line.IndexOf(":") + 26 + 30);
                                     String pituus = Convert.ToString(length_minus_info);
                                     if (length_minus_info < 0)
                                     {
-                                        using (StreamWriter w = File.AppendText("log2.txt"))
-                                          {
-                                          Log(line + pituus +":" + response.Length, w);
-                                          }
-                                             }
-                                   if (length_minus_info >= 0)
+                                       using (StreamWriter w = File.AppendText("log2.txt"))
                                         {
+                                      Log(line + pituus + ", response.Length:" + response.Length + ", bytesRec:" + bytesRec, w);
+                                         }
+                                    }
+                                    if (length_minus_info >= 0)
+                                    {
                                         try
                                         {
                                             string decallin = line.Substring(5, (line.IndexOf(":") - 7)).Trim();
                                             string dxcall = line.Substring((line.IndexOf(":") + 12), 10).Trim();
-                                            string freq_orig = line.Substring((line.IndexOf(":") + 2), 9).Trim();
+                                            string freq_orig = line.Substring((line.IndexOf(":") + 2), 10).Trim();
                                             string info = line.Substring((line.IndexOf(":") + 26), 30);
                                             info = info.Trim();
                                             //string mode = info.Substring((line.IndexOf("db") + 26), 30);
@@ -255,10 +287,10 @@ namespace ClusterEtl
                                                     dxcountry = dr2[0].ToString();
                                                     dx_cont = dr2[1].ToString();
                                                 }
-                                               conn.Close();
+                                                conn.Close();
 
-                                               conn.Open();
-                                               NpgsqlCommand cmd3 = new NpgsqlCommand("SELECT * from(SELECT  country,continent,length(prefix) as prelength FROM cluster.dxcc where :value1 like concat(dxcc.prefix, '%') order by 3 desc limit 1)as foo where prelength >0", conn);
+                                                conn.Open();
+                                                NpgsqlCommand cmd3 = new NpgsqlCommand("SELECT * from(SELECT  country,continent,length(prefix) as prelength FROM cluster.dxcc where :value1 like concat(dxcc.prefix, '%') order by 3 desc limit 1)as foo where prelength >0", conn);
                                                 cmd3.Parameters.Add(new NpgsqlParameter("value1", NpgsqlTypes.NpgsqlDbType.Text));
                                                 cmd3.Parameters[0].Value = decallin;
                                                 // string decountry = (String)cmd3.ExecuteScalar();
@@ -269,7 +301,7 @@ namespace ClusterEtl
                                                     de_cont = dr3[1].ToString();
                                                 }
                                                 conn.Close();
-                                                                                             
+
                                                 conn.Open();
                                                 NpgsqlCommand cmd = new NpgsqlCommand("insert into cluster.clustertable(dxcall,country,de_country,freq,decall,skimmode,mode,band,sig_noise,dx_continent,de_continent,title) values ( :value1 ,:value2,:value3,:value4,:value5,:value6,:value7,:value8,:value9,:value10,:value11,:value12)", conn);
                                                 cmd.Parameters.Add(new NpgsqlParameter("value1", NpgsqlTypes.NpgsqlDbType.Text));
@@ -308,7 +340,7 @@ namespace ClusterEtl
                                                     Log(ex.Message, w);
                                                 }
                                             }
-                                            }
+                                        }
                                         catch (Exception ex)
                                         {
                                             Console.WriteLine(ex);
@@ -324,9 +356,9 @@ namespace ClusterEtl
                         }
 
                         // Release the socket.
-                       // sender.Shutdown(SocketShutdown.Both);
+                        // sender.Shutdown(SocketShutdown.Both);
                         //sender.Close();
-                       // Console.WriteLine("ended");
+                        // Console.WriteLine("ended");
                         // Console.ReadLine();
                     }
                     catch (ArgumentNullException ane)
@@ -335,7 +367,7 @@ namespace ClusterEtl
                     }
                     catch (SocketException se)
                     {
-                        
+                        System.Threading.Thread.Sleep(5000);
                         // Console.ReadLine();
                         //Console.WriteLine(ConnStatus);
                         if (ConnStatus)
@@ -345,15 +377,17 @@ namespace ClusterEtl
                             {
                                 Log(se.ToString(), w);
                             }
+                          
                             // Release the socket.
                             sender.Shutdown(SocketShutdown.Both);
                             sender.Close();
-                           ConnStatus = false;
+                            ConnStatus = false;
                         }
 
                     }
                     catch (Exception e)
                     {
+                        System.Threading.Thread.Sleep(5000);
                         Console.WriteLine("Unexpected exception : {0}", e.ToString());
                         using (StreamWriter w = File.AppendText("log.txt"))
                         {
@@ -365,9 +399,10 @@ namespace ClusterEtl
                 }
                 catch (Exception e)
                 {
+                    System.Threading.Thread.Sleep(5000);
                     Console.WriteLine(e.ToString());
                 }
-             
+
             }
         }
 
