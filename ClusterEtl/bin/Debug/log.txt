@@ -261,3 +261,13 @@ Log Entry : 21:41:03 30 September 2017
   :
   Connected
 -------------------------------
+
+Log Entry : 11:46:18 30 December 2017
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 11:46:18 30 December 2017
+  :
+  Connected
+-------------------------------
