@@ -62,6 +62,7 @@ public class ClusterEtl {
     	String Postgresql_address = "192.168.1.200";
     	String DataBase = "postgres";
     	String skimmerName = "RBN";
+        String ModeFilter = "FT8";
     	int rowCounter = 0;	
     	int iport = 7000;
     	// File configFile = new File("src/clusteretl/config.properties");
@@ -82,6 +83,7 @@ public class ClusterEtl {
     		Sqluser = props.getProperty("postgresql_user");
     		Sqlpass = props.getProperty("postgresql_password");
     		skimmerName= props.getProperty("skimmer_name");
+                ModeFilter= props.getProperty("modefilter");
     		
 
     		//System.out.print("Host name is: " + clusteraddress);
@@ -277,6 +279,13 @@ public class ClusterEtl {
 
                                                                                                                                                         
                                                       if (response.startsWith("DX")) {
+                                                         String Mode = response.substring(38,(response.length()-7)).trim()  ;
+                                                              if (Mode.matches("(.*)" + ModeFilter + "(.*)")) {
+                                                    	     // clusterTextArea.append(response.substring(38,(response.length()-7)).trim() + "\n");
+                                                                 }
+                                                              else {
+                                                            
+                                                     
                                                       //parsing columns  
                                                       java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
                                                       
@@ -437,7 +446,7 @@ public class ClusterEtl {
                                           	            } */
                                           // PostregSQL routines
                                                   
-                                                                                                  
+                                                                                                 
                                                      try {
                                                          // con = DriverManager.getConnection(url, user, password);
                                                           
@@ -510,6 +519,7 @@ public class ClusterEtl {
                                                           }
                                                       }
                                             //PostregSQL routines end
+                                                              }
                            }
                            }
                            
