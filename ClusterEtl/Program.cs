@@ -132,7 +132,8 @@ namespace ClusterEtl
                                     }
                                 }
                                     // is line length enough for substring
-                                    int length_minus_info = line.Length - (line.IndexOf(":") + 26 + 30);
+                                    int length_minus_info = line.Length - (line.IndexOf(":") + 26);
+                                    // int length_minus_info = line.Length - (line.IndexOf(":") + 26 + 30);
                                     String pituus = Convert.ToString(length_minus_info);
                                     if (length_minus_info < 0)
                                     {
@@ -142,13 +143,15 @@ namespace ClusterEtl
                                          }
                                     }
                                     if (length_minus_info >= 0)
+                                    //if (length_minus_info >= 0)
                                     {
                                         try
                                         {
                                             string decallin = line.Substring(5, (line.IndexOf(":") - 7)).Trim();
                                             string dxcall = line.Substring((line.IndexOf(":") + 12), 10).Trim();
                                             string freq_orig = line.Substring((line.IndexOf(":") + 2), 10).Trim();
-                                            string info = line.Substring((line.IndexOf(":") + 26), 30);
+                                            string info = line.Substring((line.IndexOf(":") + 26));
+                                            //string info = line.Substring((line.IndexOf(":") + 26), 30);
                                             info = info.Trim();
                                             //string mode = info.Substring((line.IndexOf("db") + 26), 30);
                                             // Console.WriteLine(info);
