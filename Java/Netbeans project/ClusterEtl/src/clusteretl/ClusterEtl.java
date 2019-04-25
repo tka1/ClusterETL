@@ -11,7 +11,6 @@ import java.util.TimeZone;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -74,7 +73,7 @@ public class ClusterEtl {
     		props.load(reader);
 
     		 clusteraddress = props.getProperty("address");
-                 System.out.print(clusteraddress);
+                 System.out.println(clusteraddress);
     		String port = props.getProperty("port");
     		call = props.getProperty("call");
     		iport = Integer.parseInt(port);
@@ -272,7 +271,7 @@ public class ClusterEtl {
                                                       String ss = clusterTextArea.getText();
                                                       int pos = ss.length();
                                                       clusterTextArea.setCaretPosition(pos);
-                                                      if (rowCounter == 30) {
+                                                      if (rowCounter == 30000) {
                                                     	  clusterTextArea.setText(null);
                                                     	 rowCounter = 0;	
                                                       }
@@ -290,7 +289,8 @@ public class ClusterEtl {
                                                       java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
                                                       
                                                       String decallin = (response.substring(5, 16)).trim();
-                                                      String decall_trimmed = decallin.replaceAll("[-#:]","");
+                                                      String decall_trimmed = decallin.replaceAll("[#:-]","");
+                                                      //String decall_trimmed = decallin;
                                                       String dxcall = response.substring((response.length()-50), (response.length()-37)).trim();
                                                       String country_2 = "";
                                                       String de_country = "";
@@ -307,7 +307,7 @@ public class ClusterEtl {
                                                       S_N = info.substring((info.indexOf("dB")-3), (info.indexOf("dB"))).trim();
                                                      
                                                       
-                                                      
+                                                                                      
                                                         
                                                       String Skimmode = null;
                                                       if (info.matches("(.*)CQ(.*)")) {
@@ -396,9 +396,11 @@ public class ClusterEtl {
                                                       
                                                       
                                                 // write line to log file      
-                                                   //   bufferWritter.write(decall_trimmed + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + datetime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent +";" +de_country +";" + Skimmode);
-                                                     // bufferWritter.newLine();
-                                                     // bufferWritter.flush();
+                                               //       bufferWritter.write(decall_trimmed + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + datetime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent +";" +de_country +";" + Skimmode);
+                                               //      bufferWritter.newLine();
+                                               //      bufferWritter.write(response);
+                                               //      bufferWritter.newLine();
+                                               //       bufferWritter.flush();
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
                                                       
                                             //Mongodb routines       
@@ -532,6 +534,7 @@ public class ClusterEtl {
                         	   clusterTextArea.append("Timeout occurred" + "\n");
                         	   System.out.println ("Timeout occurred ");
                         	   System.out.println (iioe);
+                                    bufferWritter.write( datetime +" Timeout occurred");
                         	   //close the i/o streams
                                s_out.close();
                                s_in.close();
