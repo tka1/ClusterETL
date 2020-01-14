@@ -196,6 +196,17 @@ namespace ClusterEtl
                                             {
                                                 mode = "CW";
                                             }
+
+                                            Match ft4match = Regex.Match(info, ("(.*)FT4(.*)"));
+                                            if (ft4match.Success)
+                                            {
+                                                mode = "FT4";
+                                            }
+                                            Match ft8match = Regex.Match(info, ("(.*)FT8(.*)"));
+                                            if (ft8match.Success)
+                                            {
+                                                mode = "FT8";
+                                            }
                                             decimal freq = 0;
                                             decimal signal = 0;
                                             try
